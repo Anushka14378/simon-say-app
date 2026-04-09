@@ -30,7 +30,7 @@ function levelUp(){
     level++;
     h2.innerText=`Level ${level}`;
 
-    let ranIdx=Math.floor(Math.random() *3);
+    let ranIdx=Math.floor(Math.random() *4);
     let ranColor=btns[ranIdx];
     let ranBtn=document.querySelector(`.${ranColor}`);
     gameSeq.push(ranColor);
@@ -40,7 +40,7 @@ function levelUp(){
 function checkAns(idx){
     if(userSeq[idx]==gameSeq[idx]){
         if(userSeq.length == gameSeq.length){
-           setTimeout(levelUp,1000);
+           setTimeout(levelUp,700);
         }
     }else{
         h2.innerHTML=`Game over! your score was <b>${level}</b> <br>Press any key to start`;

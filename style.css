@@ -2,15 +2,25 @@ body{
     text-align: center;
 }
 .btn{
-    height: 200px;
-    width:200px;
+    height: 40vw;
+    width: 40vw;
+    max-height: 200px;
+    max-width: 200px;
     border-radius: 20%;
     border: 10px solid black;
-    margin: 2rem;
+    margin: 1rem;
 }
 .btn-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+}
+h1{
+    font-size: 6vw;
+}
+
+h2{
+    font-size: 4vw;
 }
 .red{
     background-color: #d95980;
@@ -26,4 +36,44 @@ body{
 }
 .flash{
     background-color: white;
+}
+@media (max-width: 600px) {
+    .btn{
+        height: 35vw;
+        width: 35vw;
+        margin: 0.5rem;
+    }
+
+    h1{
+        font-size: 8vw;
+    }
+
+    h2{
+        font-size: 5vw;
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    .btn{
+        height: 25vw;
+        width: 25vw;
+        max-height: 180px;
+        max-width: 180px;
+        margin: 1rem;
+    }
+
+    h1{
+        font-size: 5vw;
+    }
+
+    h2{
+        font-size: 3vw;
+    }
+
+    .btn-container{
+        gap: 10px;
+    }
+}
+.line-one, .line-second{
+    display: flex;
+    justify-content: center;
 }
